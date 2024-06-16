@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment - Byju's</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Purple background */
+            color: #333; /* Dark text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .course-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            color: #333;
+            text-align: center;
+            box-sizing: border-box;
+			margin-bottom:25px;
+			margin-top:90px;
+        }
+
+        .course-container img {
+            border-radius: 10px;
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #6a0dad; /* Purple text */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .course-details {
+            text-align: left;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .course-details h2 {
+            color: #6a0dad; /* Purple text */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .course-details p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .enroll-form {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #6a0dad; /* Purple text */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            border-color: #6a0dad;
+            outline: none;
+        }
+
+        .enroll-button {
+            background-color: #6a0dad; /* Purple button */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .enroll-button:hover {
+            background-color: #5a009d; /* Darker purple on hover */
+        }
+		.header {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header img {
+            width: 40px; /* Adjust based on your logo dimensions */
+            height: auto;
+            margin-right: 10px;
+			padding :10px;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+            margin: 0;
+			color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0018.jpg" alt="BYJU'S Logo">
+        <h1>The Learning App</h1>
+    </div>
+    <div class="course-container">
+        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0014.jpg" alt="Course Image">
+        <h1>Digital Marketing</h1>
+        <div class="course-details">
+            <h2>Course Overview</h2>
+            <p>This course provides a comprehensive introduction to the world of digital marketing. Learn the fundamentals of SEO, social media marketing, email marketing, and content marketing strategies.</p>
+            
+            <h2>What You'll Learn</h2>
+            <p>By the end of this course, you will have a solid understanding of digital marketing concepts such as keyword research, content creation, campaign analysis, and optimization. You'll also work on hands-on projects to apply what you've learned.</p>
+            
+            <h2>Instructor</h2>
+            <p>Jane Doe, an experienced digital marketing specialist with over 8 years of experience in the industry.</p>
+            
+            <h2>Course Duration</h2>
+            <p>12 weeks (3 hours per week)</p>
+            
+            <h2>Course Fee</h2>
+            <p>$499</p>
+        </div>
+        
+        <form action="/enroll" method="POST" class="enroll-form">
+            <h2>Enroll Now</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment Method</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="UPI">UPI</option>
+                </select>
+            </div>
+            <button type="submit" class="enroll-button">Enroll</button>
+        </form>
+    </div>
+</body>
+</html>

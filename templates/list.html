@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses - Byju's Web App</title>
+    <link rel="stylesheet" href="chatproj.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px; /* Set maximum width for the container */
+            margin: 0 auto; /* Center align the container */
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: nowrap; /* Ensures items stay in a single line */
+            overflow-x: auto; /* Enables horizontal scrolling */
+            gap: 20px;
+            padding-bottom: 20px; /* Adds some space at the bottom */
+        }
+        .course-card {
+            width: 300px; /* Fixed width for each course card */
+            height: 400px; /* Fixed height for each course card */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex; /* Use flexbox to align image and info */
+            flex-direction: column; /* Stack image and info vertically */
+        }
+        .course-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the entire space */
+        }
+        .course-info {
+            padding: 10px;
+            flex: 1; /* Take remaining space in the flex container */
+            display: flex;
+            flex-direction: column;
+        }
+        .course-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .course-info p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+		.header {
+    background-color: Purple; /* Purple background color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0px;
+}
+
+.header h1 {
+    margin: 0px;
+    font-size: 24px;
+	margin-right:1220px;
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff; /* White background color for courses */
+}
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0018.jpg" alt="Byju's Logo">
+    <h1>The Learning App</h1>
+</header>
+
+    <main>
+	
+        <section class="section">
+            <div class="container">
+                <h2>All Courses</h2>
+                <div class="course-container">
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\images.jpeg" alt="Course 1">
+                        <div class="course-info">
+                            <h3>Mathematics Fundamentals</h3>
+                            <p>Build a strong foundation in mathematics</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\download.jpeg" alt="Course 2">
+                        <div class="course-info">
+                            <h3>Introduction to Programming</h3>
+                            <p>Learn the basics of programming with Python</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\download (1).jpeg" alt="Course 3">
+                        <div class="course-info">
+                            <h3>Data Science Essentials</h3>
+                            <p>Explore the key concepts of data science.</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0017.jpg"alt="Course 4">
+                        <div class="course-info">
+                            <h3>Ethical Hacking</h3>
+                            <p>Learn to maintain the security of the system</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0019.jpg" alt="Course 5">
+                        <div class="course-info">
+                            <h3>Machine Learning</h3>
+                            <p>Understand the basics of machine learning</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0008.jpg" alt="Course 6">
+                        <div class="course-info">
+                            <h3>Cloud Computing</h3>
+                            <p>Learn the basics of cloud computing</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\download .jpeg" alt="Course 7">
+                        <div class="course-info">
+                            <h3>Computer Architecture</h3>
+                            <p>Get introduced to computer architecture</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0007.jpg" alt="Course 8">
+                        <div class="course-info">
+                            <h3>Algorithms</h3>
+                            <p>Learn about various algorithms</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0009.jpg" alt="Course 9">
+                        <div class="course-info">
+                            <h3>Computer Networking</h3>
+                            <p>Understand the basics of networking</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0011.jpg" alt="Course 10">
+                        <div class="course-info">
+                            <h3>Data Structures</h3>
+                            <p>Learn about various data structures</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0012.jpg" alt="Course 11">
+                        <div class="course-info">
+                            <h3>App Development</h3>
+                            <p>Indulge in the idea of creating the apps</p>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+

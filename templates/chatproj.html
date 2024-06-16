@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byju's Web App</title>
+    <link rel="stylesheet" href="chatproj.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav ul {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .top-nav ul li a {
+            color: grey;
+            text-decoration: none;
+        }
+        .top-nav ul li a:hover {
+            color: black;
+        }
+        .top-nav ul li input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .top-nav ul li button {
+            padding: 5px 0px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .top-nav ul li button:hover {
+            background-color: #0056b3;
+        }
+        .profile-icon {
+             /* Added to position dropdown */
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Added cursor style for profile icon */
+        }
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+		footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-divider {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-text {
+    font-weight: bold;
+    color: orange;
+}
+
+.social-icons {
+    flex: 1;
+    text-align: right;
+	
+}
+
+.social-icons a {
+    margin-left: 10px;
+	
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+	
+}
+
+        .dropdown-menu {
+            position: absolute;
+            top: 50px; /* Adjust this value to position the dropdown below the profile icon */
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 1;
+			margin-right:8px;
+			margin-top:15px;
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+		
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0018.jpg" alt="Byju's Logo">
+            <h1>The Learning App</h1>
+        </div>
+        <div class="top-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="list.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="openLoginForm()">Login</a></li>
+                <li>
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fa fa-search"></i></button>
+                </li>
+                <!-- Profile Icon -->
+                <li class="profile-icon" onclick="toggleDropdown()">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0021.jpg" width="100" height="100" alt="Profile">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="profile.html">Profile</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <h2>About Byju's</h2>
+                <p>BYJU'S is an innovative global edtech leader at the intersection of content, media and technology. From our beginnings in one classroom in Bengaluru, India, BYJU'S today has grown its presence to 100+ countries across the world. As the trusted learning partner of 150+ million students, we bring the future of education to the present through technology-enabled, personalized and engaging learning journeys. The companies under the BYJU'S Group serve a wide range of learners - from children at the start of their education to adults looking to upgrade their professional skills.</p>
+                <a href="#courses" class="btn">Explore Courses</a>
+            </div>
+        </section>
+
+        <section id="courses" class="section">
+            <h2>Featured Courses</h2>
+            <div class="course-container">
+			
+                <div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\images.jpeg"" alt="Course 1">
+                    <div class="course-info">
+                        <h3>Mathematics Fundamentals</h3>
+                        <p>Build a strong foundation in mathematics</p>
+                        <a href="digimark.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\download.jpeg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Introduction to Programming</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="ai.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0022.jpg" alt="Course 3">
+                    <div class="course-info">
+                        <h3>Web Development</h3>
+                        <p>Explore the key concepts of data science.</p>
+                        <a href="webdev.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0017.jpg"alt="Course 4">
+                    <div class="course-info">
+                        <h3>Ethical Hacking</h3>
+                        <p>Learn to maintain the security of the system</p>
+                        <a href="ehack.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0019.jpg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Machine Learning</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="ml.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0008.jpg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Cloud Computing</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="cloud.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\download .jpeg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Computer Architecture</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="comparch.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0007.jpg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Algorithms</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="algo.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0009.jpg" alt="Course 2">
+                    <div class="course-info">
+                        <h3>Computer Networks</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="compnet.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				<div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0011.jpg"alt="Course 2">
+                    <div class="course-info">
+                        <h3>Data Structures</h3>
+                        <p>Learn the basics of programming with Python</p>
+                        <a href="datastruct.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+				
+				
+                <div class="course-card">
+                    <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0012.jpg" alt="Course 5">
+                    <div class="course-info">
+                        <h3>App Development</h3>
+                        <p>Indulge in the idea of creating the apps</p>
+                        <a href="appdev.html" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+    <div class="footer-content">
+        <div class="footer-divider">
+            <span class="footer-text"><b> Why Us?</b></span>
+            <p>BYJU'S is a global leader in edtech, offering personalized and engaging learning experiences through innovative technology.</p>
+        </div>
+        <div class="social-icons">
+            <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0015.jpg">
+            <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0016.jpg" >
+            <img src="C:\Users\jaiad\OneDrive\Desktop\Images\IMG-20240614-WA0020.jpg" >
+        </div>
+    </div>
+</footer>
+
+    </main>
+
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Login</h2>
+            <form action="#">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="openSignupForm()">Sign up</a></p>
+        </div>
+    </div>
+
+    <div id="signupPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSignupForm()">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openLoginForm() {
+            document.getElementById("loginPopup").style.display = "block";
+        }
+
+        function closeLoginForm() {
+            document.getElementById("loginPopup").style.display = "none";
+        }
+
+        function openSignupForm() {
+            document.getElementById("signupPopup").style.display = "block";
+        }
+
+        function closeSignupForm() {
+            document.getElementById("signupPopup").style.display = "none";
+        }
+
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-icon') && !event.target.closest('.profile-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
